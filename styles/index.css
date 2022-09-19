@@ -1,0 +1,394 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div {
+    display: block;
+}
+
+nav {
+    min-height: 66px;
+    border: 1px solid #131A28;
+    background-color: #131A28;
+    z-index: 999999;
+    color: rgb(196, 209, 212);
+
+}
+
+#navbar {
+    background-color: #131A28 !important;
+    position: sticky;
+}
+
+#nav-container {
+    display: flex;
+    padding: 0 50px;
+    width: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    min-height: 66px;
+    
+}
+
+#left-element {
+    display: flex;
+}
+
+#right-element {
+    display: flex;
+    height: 32px;
+}
+
+#nav-logo img {
+    width: 162px;
+    height: 62px;
+    padding-bottom: 14px;
+}
+
+#navigations {
+    position: relative;
+
+}
+
+#navigations ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+
+}
+
+.dropdown-container {
+    border-bottom: 0 solid #131A28;
+}
+
+#navigations ul li .nav-link {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px 15px 20px;
+    line-height: normal;
+}
+
+.dropdown-container .sublink-container {
+    display: none;
+    background-color: #182132;
+    height: auto;
+    border-radius: 4px;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 22%);
+    flex-direction: column;
+}
+
+.slide-up {
+    animation: slideup 0.5s, hs-fadeIn 0.5s;
+}
+
+.dropdown-container .sublink-container .dropdown-link {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+    opacity: 1;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown-container:hover .sublink-container {
+    display: block;
+}
+
+
+.search-container {
+    position: relative;
+    z-index: 1;
+}
+
+
+.search-container input {
+    background-color: #131A28;
+    width: 240px;
+    height: 100%;
+    color: rgb(196, 209, 212);
+    border: none;
+    outline: none;
+    transition: 0.3s;
+
+}
+
+.search-container input:focus {
+    width: 360px;
+    border-bottom: 1px solid rgb(0, 134, 223);
+    transition: 0.3s;
+}
+.search-container input::placeholder {
+    font-size: 14px;
+    color: rgb(227, 231, 231);
+    opacity: 1;
+}
+
+.search-container .searchIcon {
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    pointer-events: none;
+    opacity: .7;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transform: translateY(1px);
+}
+
+.fa-solid {
+    font-size: 13px;
+}
+
+.search-container .result-holder {
+    width: 360px;
+    overflow: hidden;
+    position: absolute;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #131A28;
+    max-height: 460px;
+    /* border: 1px solid red; */
+    z-index: 1000;
+    display: none;
+}
+.search-container .result-holder.focusActive{
+    display: block;
+}
+
+.movies-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.movies-search img {
+    width: 100px;
+    height: 80px;
+}
+
+.user-profile .user-pic {
+    cursor: pointer;
+    margin-top: 0px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.user-profile .user-pic img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: unset;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.user-profile .user-pic .sublink-container {
+    width: auto;
+    margin-top: 0;
+    right: 30px;
+}
+
+@keyframes slideup {
+    from {
+        margin-top: 5%;
+    }
+
+    to {
+        margin-top: 0%;
+    }
+}
+
+@keyframes hs-fadeIn {
+    from {
+        opacity: 0;
+        ;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* .slick-track{
+    display: flex;
+
+} */
+
+
+
+/* Movies Card Slider Part*/
+.movies{
+    background-color: #0C101A;
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    padding-left: 40px;
+    padding-top: 20px;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.movies-list {
+    width: 100%;
+    position: relative;    
+    align-items: center;    
+    margin-right: 10px;
+    transition: .5s;   
+}
+.movie-cards{
+    height: 350px;
+    padding:0 30px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.card-container {
+    position: relative;
+    width: 92%;
+    padding-left: 10px;
+    height: 300px;
+    display: flex;    
+    margin: 0 auto;
+    align-items: center;
+    transition: 0.5s;
+    
+}
+.movie-cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card {
+    position: relative;
+    min-width: 150px;
+    width: 210px;
+    height: 280px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.23);
+    z-index: 9;
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+.card-body {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.name {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 70%;
+
+}
+
+.des {
+    color: white;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.watchlist-btn {
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.pre-btn i,
+.nxt-btn i{
+    font-size: 22px;
+    color: white;
+    opacity: 0;
+}
+
+.pre-btn,
+.nxt-btn {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 12;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+}
+
+.pre-btn {
+    left: 0;
+    background: linear-gradient(to right, #0c111bde 0%, #0c111b00);
+}
+
+.nxt-btn {
+    right: 0;
+    background: linear-gradient(to left, #0d121de3 0%, #0c111b00);
+}
+
+.pre-btn:hover i,
+.nxt-btn:hover i {
+    opacity: 1;
+}
+
+.movies-list:hover .nxt-btn,
+.movies-list:hover .pre-btn{
+    opacity: 1;
+}

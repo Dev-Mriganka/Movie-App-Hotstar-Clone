@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/00b3499e31.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./styles/index.css" />
+		<title>Hotstar Movie</title>
+	</head>
+	<body>
+		<nav id="navbar">
+			<div id="nav-container">
+				<div id="left-element">
+					<div></div>
+					<div id="nav-logo">
+						<a href="index.html" class="">
+							<img
+								src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+								alt=""
+							/>
+						</a>
+					</div>
+					<div id="navigations" role="navigation">
+						<ul>
+							<li>
+								<div class="dropdown-container">
+									<a href="/in/tv" class="nav-link" to="/tv" target=""><div>TV</div></a>
+									<div class="sublink-container slide-up">
+										<a href="#" class="dropdown-link" target="">Other Shows</a>
+										<a href="#" class="dropdown-link" target="">Hotstar Specials</a>
+										<a href="#" class="dropdown-link" target="">Quix</a>
+										<a href="#" class="dropdown-link" target="">Star Jalsha</a>
+										<a href="#" class="dropdown-link" target="">StarPlus</a>
+										<a href="#" class="dropdown-link" target="">Star Vijay</a>
+										<a href="#" class="dropdown-link" target="">Star Bharat</a>
+										<a href="#" class="dropdown-link" target="">Asianet</a>
+										<a href="#" to="/channels" class="dropdown-link" target="">more...</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown-container active">
+									<a href="/in/movies" class="nav-link" target="">
+										<div>Movies</div>
+									</a>
+									<div class="sublink-container slide-up">
+										<a href="#" class="dropdown-link" target="">Odia</a>
+										<a href="#" class="dropdown-link" target="">Hindi</a>
+										<a href="#" class="dropdown-link" target="">Bengali</a>
+										<a href="#" class="dropdown-link" target="">Telugu</a>
+										<a href="#" class="dropdown-link" target="">Malayalam</a>
+										<a href="#" class="dropdown-link" target="">Tamil</a>
+										<a href="#" class="dropdown-link" target="">Marathi</a>
+										<a href="#" class="dropdown-link" target="">English</a>
+										<a href="#" class="dropdown-link" target="">Kannada</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown-container">
+									<a href="/in/sports" class="nav-link" target="">
+										<div>Sports</div>
+									</a>
+									<div class="sublink-container slide-up">
+										<a href="#" class="dropdown-link" target="">Cricket</a>
+										<a href="#" class="dropdown-link" target="">Tennis</a>
+										<a href="#" class="dropdown-link" target="">Football</a>
+										<a href="#" class="dropdown-link" target="">Formula 1</a>
+										<a href="#" class="dropdown-link" target="">Hockey</a>
+										<a href="#" class="dropdown-link" target="">Formula E</a>
+										<a href="#" class="dropdown-link" target="">Martial Arts</a>
+										<a href="#" class="dropdown-link" target="">Khelo India</a>
+										<a href="#" class="dropdown-link" target="">Kabaddi</a>
+										<a href="#" class="dropdown-link" target="">American Football</a>
+										<a href="#" class="dropdown-link" target="">Athletics</a>
+										<a href="#" class="dropdown-link" target="">Golf</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown-container">
+									<a href="#" class="nav-link" target="">
+										<div>Disney+</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="right-element">
+					<div class="search-container">
+						<input
+							oninput="debounce(main,1000)"
+							onfocus="myFocus()"
+							type="search"
+							placeholder="Search"
+							id="searchField"
+						/>
+						<div class="searchIcon">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</div>
+						<div class="result-holder element-show">
+							<!-- <a
+								href="#"
+								class="more-result"
+								id="more-link"
+								target=""
+								>
+								More results
+							</a> -->
+						</div>
+					</div>
+					<div class="user-profile">
+						<div role="presentation" class="user-pic">
+							<div class="dropdown-container">
+								<img
+									src="https://www.hotstar.com/assets/c724e71754181298e3f835e46ade0517.svg"
+									alt=""
+								/>
+								<div class="sublink-container slide-up">
+									<a href="#" class="dropdown-link" target="">Watchlist</a>
+									<a href="#" class="dropdown-link" target="">My Account</a>
+									<a to="" class="dropdown-link" target="">Log Out</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="movies">
+			<h1 class="title">Recommended For You</h1>
+			<div class="movies-list ">
+				<button class = "pre-btn"><i class="fa-solid fa-chevron-left"></i></button>
+				<div class="movie-cards recommended-list"></div>
+				<button class = "nxt-btn"><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
+		</div>
+		<div class="movies">
+			<h1 class="title">Drama Movies</h1>
+			<div class="movies-list ">
+				<button class="pre-btn"><i class="fa-solid fa-chevron-left"></i></button>
+				<div class="movie-cards drama-list"></div>
+				<button class="nxt-btn"><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
+		</div>
+		<div class="movies">
+			<h1 class="title">Recommended For You</h1>
+			<div class="movies-list ">
+				<button class="pre-btn"><i class="fa-solid fa-chevron-left"></i></button>
+				<div class="movie-cards recommended-list-1"></div>
+				<button class="nxt-btn"><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
+		</div>
+		<div class="movies">
+			<h1 class="title">Drama Movies</h1>
+			<div class="movies-list ">
+				<button class="pre-btn"><i class="fa-solid fa-chevron-left"></i></button>
+				<div class="movie-cards drama-list-1"></div>
+				<button class="nxt-btn"><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="./scripts/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -6,9 +6,8 @@
 
 ## Description 
 
-
-- Lately helps humans write better marketing content in collaboration with artificial intelligence and software automation.
-- Lately’s artificial intelligence studies what your social media audience wants to watch, hear or read and then builds you a custom writing model, based on what it learns.
+- It's a movie app where you can search for any movie by its name. I tried to give it a similar look to Hotstar.
+- Learned how to fetch the API and display the data.
 - Learned how to implement html css and js combination.
 
 ### Tech Stack
